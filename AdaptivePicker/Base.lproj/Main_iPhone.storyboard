@@ -103,9 +103,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="328" width="280" height="220"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.4096723344" green="1" blue="0.61024799679999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="995" constant="220" id="LBQ-aJ-5Me"/>
-                                </constraints>
                                 <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.97216176300000001" blue="0.75638502399999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <sections>
                                     <tableViewSection headerTitle="Section-1" footerTitle="Footer" id="eBB-YG-ZpF">
