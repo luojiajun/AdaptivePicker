@@ -32,9 +32,14 @@ CGFloat old_picker_height;
 {
     old_picker_height = self.pickerHeight.constant;
     self.pickerHeight.constant = 0;
-    self.datePicker.hidden = YES;
     [self.adaptivePicker setNeedsUpdateConstraints];
-    [self.adaptivePicker.superview setNeedsLayout];
+    [UIView animateWithDuration:0.1 animations:^{
+        self.datePicker.hidden = YES;
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.2 animations:^{
+            [self.adaptivePicker.superview layoutIfNeeded];
+        }];
+    }];
 }
 
 - (IBAction) changeTime:(id)sender
@@ -43,9 +48,14 @@ CGFloat old_picker_height;
         return;
 
     self.pickerHeight.constant = old_picker_height;
-    self.datePicker.hidden = NO;
     [self.adaptivePicker setNeedsUpdateConstraints];
-    [self.adaptivePicker.superview setNeedsLayout];
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.adaptivePicker.superview layoutIfNeeded];
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.1 animations:^{
+            self.datePicker.hidden = NO;
+        }];
+    }];
 }
 
 @end
