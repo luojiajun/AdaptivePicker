@@ -20,6 +20,11 @@ CGFloat old_picker_height;
 {
     [super viewDidLoad];
     old_picker_height = self.pickerHeight.constant;
+    self.pickerHeight.constant = 0;
+    self.datePicker.hidden = YES;
+    [self.adaptivePicker setNeedsUpdateConstraints];
+    [self.adaptivePicker.superview layoutIfNeeded];
+    self.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,6 +35,8 @@ CGFloat old_picker_height;
 
 - (IBAction) done:(id)sender
 {
+    self.navigationItem.rightBarButtonItem = nil;
+
     old_picker_height = self.pickerHeight.constant;
     self.pickerHeight.constant = 0;
     [self.adaptivePicker setNeedsUpdateConstraints];
@@ -56,6 +63,8 @@ CGFloat old_picker_height;
             self.datePicker.hidden = NO;
         }];
     }];
+
+    self.navigationItem.rightBarButtonItem = self.doneButton;
 }
 
 @end
