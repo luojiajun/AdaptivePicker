@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="V0Y-3X-URQ">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3pL-qW-4ce">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="V0Y-3X-URQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rfD-up-cdO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="X4v-aI-2nB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWv-eM-5j7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DFSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bHA-gP-BMy"/>
+                        <viewControllerLayoutGuide type="bottom" id="WuD-UI-78e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuD-zs-9LD" userLabel="Adaptive Picker">
+                                <rect key="frame" x="0.0" y="79" width="320" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Faj-ff-RhS">
+                                        <rect key="frame" x="70" y="8" width="181" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Etn-JT-bn4"/>
+                                            <constraint firstAttribute="width" constant="181" id="Neu-8O-VA4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="3:51 PM">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeTime:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sQo-Qf-X1Z"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-7p-o5b">
+                                        <rect key="frame" x="0.0" y="38" width="320" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="Rqc-kR-N8f"/>
+                                            <constraint firstAttribute="height" constant="162" id="gLw-Gb-GoC"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="417055911.41165298">
+                                            <!--<__NSDate Class=2014-03-21 00:51:51 +0000 timeInterval=417055911.411653 ISO8601=2014-03-20T20:51:51.412-0400>-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Faj-ff-RhS" secondAttribute="centerX" constant="-0.5" id="3Ag-Ix-uaT"/>
+                                    <constraint firstItem="FcZ-7p-o5b" firstAttribute="top" secondItem="Faj-ff-RhS" secondAttribute="bottom" id="JMk-C9-Kd2"/>
+                                    <constraint firstAttribute="centerX" secondItem="FcZ-7p-o5b" secondAttribute="centerX" id="MfQ-VJ-UzH"/>
+                                    <constraint firstItem="Faj-ff-RhS" firstAttribute="top" secondItem="zuD-zs-9LD" secondAttribute="top" constant="8" id="iVs-rz-v6R"/>
+                                    <constraint firstAttribute="bottom" secondItem="FcZ-7p-o5b" secondAttribute="bottom" id="kk9-3n-XA1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Below the Adaptive Picker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVc-LQ-yDe">
+                                <rect key="frame" x="59" y="287" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yVc-LQ-yDe" secondAttribute="centerX" id="159-GL-bfk"/>
+                            <constraint firstItem="zuD-zs-9LD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2Ad-Ef-k2p"/>
+                            <constraint firstAttribute="centerX" secondItem="zuD-zs-9LD" secondAttribute="centerX" id="Flj-Hz-vHV"/>
+                            <constraint firstItem="yVc-LQ-yDe" firstAttribute="top" secondItem="zuD-zs-9LD" secondAttribute="bottom" constant="8" id="JgY-3g-1sv"/>
+                            <constraint firstItem="zuD-zs-9LD" firstAttribute="top" secondItem="bHA-gP-BMy" secondAttribute="bottom" constant="15" id="ltE-ZR-0oD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g7J-gE-mJy">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="hiq-69-UNd">
+                            <connections>
+                                <action selector="done:" destination="vXZ-lx-hvc" id="cHf-dZ-rMr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adaptivePicker" destination="zuD-zs-9LD" id="qJN-w8-h6q"/>
+                        <outlet property="datePicker" destination="FcZ-7p-o5b" id="9vg-QG-1k7"/>
+                        <outlet property="doneButton" destination="hiq-69-UNd" id="El1-wE-rl2"/>
+                        <outlet property="pickerHeight" destination="gLw-Gb-GoC" id="OTh-ml-DZ8"/>
+                        <outlet property="timeButton" destination="Faj-ff-RhS" id="sxr-E0-gwl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="123"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

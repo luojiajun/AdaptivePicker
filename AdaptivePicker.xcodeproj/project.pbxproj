@@ -13,8 +13,7 @@
 		BF69630018DBC0B800394828 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF6962FE18DBC0B800394828 /* InfoPlist.strings */; };
 		BF69630218DBC0B800394828 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF69630118DBC0B800394828 /* main.m */; };
 		BF69630618DBC0B800394828 /* DFSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF69630518DBC0B800394828 /* DFSAppDelegate.m */; };
-		BF69630918DBC0B800394828 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF69630718DBC0B800394828 /* Main_iPhone.storyboard */; };
-		BF69630C18DBC0B800394828 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF69630A18DBC0B800394828 /* Main_iPad.storyboard */; };
+		BF69630918DBC0B800394828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF69630718DBC0B800394828 /* Main.storyboard */; };
 		BF69630F18DBC0B800394828 /* DFSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF69630E18DBC0B800394828 /* DFSViewController.m */; };
 		BF69631118DBC0B800394828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF69631018DBC0B800394828 /* Images.xcassets */; };
 		BF69631818DBC0B900394828 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69631718DBC0B900394828 /* XCTest.framework */; };
@@ -45,8 +44,7 @@
 		BF69630318DBC0B800394828 /* AdaptivePicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdaptivePicker-Prefix.pch"; sourceTree = "<group>"; };
 		BF69630418DBC0B800394828 /* DFSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSAppDelegate.h; sourceTree = "<group>"; };
 		BF69630518DBC0B800394828 /* DFSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSAppDelegate.m; sourceTree = "<group>"; };
-		BF69630818DBC0B800394828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		BF69630B18DBC0B800394828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BF69630818DBC0B800394828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF69630D18DBC0B800394828 /* DFSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSViewController.h; sourceTree = "<group>"; };
 		BF69630E18DBC0B800394828 /* DFSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSViewController.m; sourceTree = "<group>"; };
 		BF69631018DBC0B800394828 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,8 +114,7 @@
 			children = (
 				BF69630418DBC0B800394828 /* DFSAppDelegate.h */,
 				BF69630518DBC0B800394828 /* DFSAppDelegate.m */,
-				BF69630718DBC0B800394828 /* Main_iPhone.storyboard */,
-				BF69630A18DBC0B800394828 /* Main_iPad.storyboard */,
+				BF69630718DBC0B800394828 /* Main.storyboard */,
 				BF69630D18DBC0B800394828 /* DFSViewController.h */,
 				BF69630E18DBC0B800394828 /* DFSViewController.m */,
 				BF69631018DBC0B800394828 /* Images.xcassets */,
@@ -232,9 +229,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF69630C18DBC0B800394828 /* Main_iPad.storyboard in Resources */,
 				BF69631118DBC0B800394828 /* Images.xcassets in Resources */,
-				BF69630918DBC0B800394828 /* Main_iPhone.storyboard in Resources */,
+				BF69630918DBC0B800394828 /* Main.storyboard in Resources */,
 				BF69630018DBC0B800394828 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,20 +283,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BF69630718DBC0B800394828 /* Main_iPhone.storyboard */ = {
+		BF69630718DBC0B800394828 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BF69630818DBC0B800394828 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		BF69630A18DBC0B800394828 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF69630B18DBC0B800394828 /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		BF69632018DBC0B900394828 /* InfoPlist.strings */ = {
@@ -475,6 +463,7 @@
 				BF69632918DBC0B900394828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF69632A18DBC0B900394828 /* Build configuration list for PBXNativeTarget "AdaptivePickerTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +472,7 @@
 				BF69632C18DBC0B900394828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
